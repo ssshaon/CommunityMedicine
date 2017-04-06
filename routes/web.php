@@ -21,6 +21,7 @@ Route::get('/admin', 'UserController@hologin');
 Route::get('/admin/center/medicine', 'UserController@medicine');
 Route::get('/admin/center/doctor', 'UserController@doctor');
 Route::get('/admin/center/patient', 'UserController@patient');
+Route::get('/admin/user/create', 'UserController@create');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

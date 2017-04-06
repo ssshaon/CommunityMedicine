@@ -25,4 +25,7 @@ class UserController extends Controller
   public function patient(){
       return view('Admin.center.patient');
   }
+  public function create(){
+      return view('Admin.user.create');
+  }
 }

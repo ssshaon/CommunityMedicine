@@ -13,10 +13,10 @@ class AddUserPasswordToCenters extends Migration
      */
     public function up()
     {
-        Schema::table('centers', function (Blueprint $table) {
-            $table->string('user_password')->after('deleted_at')->nullable();
-            $table->foreign('user_password')->references('id')->on('users')->onDelete('cascade');
-        });
+//        Schema::table('centers', function (Blueprint $table) {
+//            $table->string('user_password')->after('deleted_at')->nullable();
+//            $table->foreign('user_password')->references('id')->on('users')->onDelete('cascade');
+//        });
     }
 
     /**

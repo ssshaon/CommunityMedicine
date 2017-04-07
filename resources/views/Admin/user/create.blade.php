@@ -2,16 +2,24 @@
 @section('add_center','active')
 @section('main_title','Add Center')
 @section('content_name','Create New Center')
+
  @section('content')
- {!! Form::open() !!}
+     @if(Session::has('message'))
+         <h2 class="btn btn-success">{{Session::get('message')}}</h2><br>
+         {{Auth::user()->id}}<br>
+         {{Auth::user()->password}}
+     @endif
+
+
+ {!! Form::open(['method'=>'post','url'=>'admin/user/store']) !!}
  <div>
-     {!! Form::label('name','Name') !!}
-     {!! Form::text('name',null,['placeholder'=>'Center Name']) !!}
+     {!! Form::label('text','Name') !!}
+     {!! Form::text('text',null,['placeholder'=>'Center Name']) !!}
 
  </div>
  <div>
-     {!! Form::label('name','District') !!}
-     {!! Form::text('name',null,['placeholder'=>'--Select--']) !!}
+     {!! Form::label('string','District') !!}
+     {!! Form::text('string',null,['placeholder'=>'--Select--']) !!}
  </div>
  <div>
      {!! Form::label('name','Thana') !!}
@@ -21,6 +29,7 @@
 {!! Form::submit('Save') !!}
  </div>
      {!! Form::close() !!}
+
      @endsection
 
 

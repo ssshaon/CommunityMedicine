@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\center;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
@@ -27,5 +30,16 @@ class UserController extends Controller
   }
   public function create(){
       return view('Admin.user.create');
+  }
+  public function store(Request $request){
+$data=$request->all();
+center::create($data);
+Session::flash('message','Center Added Successfully');
+
+
+return redirect()->back();
+
+
+
   }
 }

@@ -42,4 +42,7 @@ return redirect()->back();
 
 
   }
+  public function sent(){
+
+  }
 }

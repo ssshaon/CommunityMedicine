@@ -23,6 +23,7 @@ Route::get('/admin/center/doctor', 'UserController@doctor');
 Route::get('/admin/center/patient', 'UserController@patient');
 Route::get('/admin/user/create', 'UserController@create');
 Route::post('/admin/user/store','UserController@store');
+Route::post('/admin/center/sent','UserController@sent');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

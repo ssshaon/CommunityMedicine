@@ -34,6 +34,7 @@
                     <!-- Main -->
                     <li class="navigation-header"><span>Head Office</span> <i class="icon-office" title="Main pages"></i></li>
                     <li class="@yield('add_center')"><a href="{{url('/admin/user/create')}}"><i class="icon-add"></i> <span>Create Center</span></a></li>
+                    <li class="@yield('medicine_sent')"><a href="{{url('/admin/center/medicine')}}"><i class="glyphicon-send"></i> <span>Medicine Send</span></a></li>
 
 
 
